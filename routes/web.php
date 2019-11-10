@@ -32,3 +32,6 @@ Route::middleware('verified')->group(function() {
 Route::get('/questions/{question}/answers', 'AnswersController@index')->name('questions.answers.index');
 Route::get('/questions/{slug}', 'QuestionsController@show')->name('questions.show');
 Route::get('/questions', 'QuestionsController@index')->name('questions.index');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
